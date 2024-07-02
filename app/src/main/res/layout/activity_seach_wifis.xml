@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/tv_please_wait"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please wait..."
+        android:layout_gravity="center"
+        android:textSize="16sp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"/>
+
+    <Button
+        android:id="@+id/btn_wifi_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quét lại" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_wifis"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1" />
+
+</LinearLayout>
