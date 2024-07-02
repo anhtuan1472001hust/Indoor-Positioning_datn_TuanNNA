@@ -16,6 +16,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 import com.tuanna_datn.wifiindoorpositioning.wifiindoorpositioning.R;
 import com.tuanna_datn.wifiindoorpositioning.wifiindoorpositioning.adapter.ProjectsListAdapter;
@@ -34,6 +35,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     private ProjectsListAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
     private FloatingActionButton fab;
+    private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +51,10 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         }
         mAdapter = new ProjectsListAdapter(projects);
         mRecyclerView.setAdapter(mAdapter);
+        button.setOnClickListener(v -> {
+            Intent intent = new Intent(this, UnifiedNavigationActivity.class);
+                startActivity(intent);
+        });
     }
 
     @Override
@@ -81,6 +87,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         setSupportActionBar(toolbar);
         fab = findViewById(R.id.fab);
         fab.setOnClickListener(this);
+        button = findViewById(R.id.fab_algorithm);
         mRecyclerView = findViewById(R.id.projects_recycler_view);
 //        mRecyclerView.setHasFixedSize(true);
 
